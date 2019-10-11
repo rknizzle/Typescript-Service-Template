@@ -29,7 +29,7 @@ class DocController implements Controller {
       }
 
       const controllers: string[] = []
-      fs.readdir('./src/controllers', (err, files) => {
+      fs.readdir('./dist/controllers', (err, files) => {
         files.forEach(file => {
           if (file.includes('controller') && !file.includes('doc.controller')) {
             controllers.push(`./src/controllers/${file}`)
